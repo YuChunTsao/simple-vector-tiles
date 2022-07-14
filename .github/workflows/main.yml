@@ -11,8 +11,8 @@ jobs:
         run: make
       - name: Update url (github page domain)
         run: |
-          sed -i 's+http://localhost:8080+https://yuchuntsao.github.io/simple-tile+g' ./example/index.html
-          sed -i 's+http://localhost:8080+https://yuchuntsao.github.io/simple-tile+g' ./example/style.json
+          sed -i 's+http://localhost:8080+https://yuchuntsao.github.io/simple-vector-tiles+g' ./example/index.html
+          sed -i 's+http://localhost:8080+https://yuchuntsao.github.io/simple-vector-tiles+g' ./example/style.json
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
