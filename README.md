@@ -1,9 +1,11 @@
 # Simple Vector Tiles
 
-Vector tiles made with [Natrual Earth](https://www.naturalearthdata.com/) data.
+Create vector tiles with [Natural Earth](https://www.naturalearthdata.com/) data.
 
 - Convert shapefile to geojson with `GDAL ogr2ogr`
 - Create and merge mbtiles with `tippecanoe`
+
+[Map Demo](https://yuchuntsao.github.io/simple-vector-tiles/)
 
 ## How To Use
 
