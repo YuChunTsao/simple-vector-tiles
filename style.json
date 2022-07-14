@@ -9,7 +9,7 @@
     "sources": {
       "tiles": {
         "type": "vector",
-        "tiles": ["https://yuchuntsao.github.io/simple-tile/tiles/{z}/{x}/{y}.pbf"],
+        "tiles": ["https://yuchuntsao.github.io/simple-vector-tiles/tiles/{z}/{x}/{y}.pbf"],
         "maxzoom": 2,
         "minzoom": 0
       }
