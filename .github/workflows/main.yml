@@ -1,0 +1,20 @@
+name: Create Vector Tile
+on: push
+
+jobs:
+  build-tiles:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+      - name: Create vector tiles (directory)
+        run: make
+      - name: Update url (github page domain)
+        run: |
+          sed -i 's+http://localhost:8080+https://yuchuntsao.github.io/simple-tile+g' ./example/index.html
+          sed -i 's+http://localhost:8080+https://yuchuntsao.github.io/simple-tile+g' ./example/style.json
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.DEPLOY_TOKEN }}
+          publish_dir: ./example/

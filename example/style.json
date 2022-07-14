@@ -1,0 +1,81 @@
+{
+    "version": 8,
+    "name": "Natural Earth Vector Tile",
+    "metadata": {},
+    "center": [0, 0],
+    "zoom": 0,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+      "tiles": {
+        "type": "vector",
+        "tiles": ["http://localhost:8080/tiles/{z}/{x}/{y}.pbf"],
+        "maxzoom": 2,
+        "minzoom": 0
+      }
+    },
+    "sprite": "",
+    "glyphs": "https://tiles.basemaps.cartocdn.com/fonts/{fontstack}/{range}.pbf",
+    "layers": [
+      {
+        "id": "background",
+        "type": "background",
+        "layout": { "visibility": "visible" },
+        "paint": {
+          "background-color": {
+            "stops": [
+              [0, "rgba(156, 218, 255, 1)"],
+              [8, "rgba(96, 211, 255, 1)"]
+            ]
+          },
+          "background-opacity": 0.8
+        }
+      },
+      {
+        "id": "countries-shadow",
+        "type": "fill",
+        "source": "tiles",
+        "source-layer": "countries",
+        "paint": {
+          "fill-color": "rgba(144, 144, 144, 1)",
+          "fill-translate": [2, 2],
+          "fill-opacity": 0.8
+        }
+      },
+      {
+        "id": "countries",
+        "type": "fill",
+        "source": "tiles",
+        "source-layer": "countries",
+        "paint": {
+          "fill-color": "rgba(243, 243, 243, 1)",
+          "fill-outline-color": "rgba(195, 195, 195, 0.5)"
+        }
+      },
+      {
+        "id": "places",
+        "type": "symbol",
+        "source": "tiles",
+        "source-layer": "places",
+        "minzoom": 0,
+        "maxzoom": 24,
+        "layout": {
+          "text-field": "{name}",
+          "text-size": {
+            "stops": [
+              [3, 12],
+              [8, 22]
+            ]
+          }
+        },
+        "paint": {
+          "text-color": "rgba(57, 57, 57, 1)",
+          "text-halo-width": 1,
+          "text-halo-blur": 1,
+          "text-halo-color": "rgba(255, 255, 255, 1)"
+        }
+      }
+    ],
+    "owner": "YuChunTsao"
+  }
+  
