@@ -14,7 +14,7 @@
         "minzoom": 0
       }
     },
-    "sprite": "",
+    "sprite": "https://yuchuntsao.github.io/spritezero-cli/sprites/sprite",
     "glyphs": "https://yuchuntsao.github.io/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
