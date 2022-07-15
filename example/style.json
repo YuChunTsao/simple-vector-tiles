@@ -15,7 +15,7 @@
       }
     },
     "sprite": "",
-    "glyphs": "https://tiles.basemaps.cartocdn.com/fonts/{fontstack}/{range}.pbf",
+    "glyphs": "https://yuchuntsao.github.io/fonts/{fontstack}/{range}.pbf",
     "layers": [
       {
         "id": "background",
@@ -66,7 +66,8 @@
               [3, 12],
               [8, 22]
             ]
-          }
+          },
+          "text-font": ["Open Sans Regular"]
         },
         "paint": {
           "text-color": "rgba(57, 57, 57, 1)",
